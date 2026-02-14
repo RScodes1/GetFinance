@@ -1,4 +1,5 @@
 import {Stock} from "../types/portfolio";
+import { toast } from "react-toastify";
 
 export type PortfolioResponse = {
   sectors: Stock[];
@@ -9,7 +10,7 @@ export const fetchPortfolio = async (): Promise<PortfolioResponse> => {
    const res = await fetch("api/portfolio"); 
     
   if (!res.ok) {
-    throw new Error("Failed to fetch portfolio");
+   toast.error("Failed to fetch portfolio");
   }
 
   return res.json();

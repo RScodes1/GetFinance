@@ -1,3 +1,6 @@
+import { fetch } from "undici";
+(global as any).fetch = fetch;
+
 import express from 'express'
 import cors from 'cors';
 import { env } from './config/env';

@@ -12,7 +12,7 @@ export default function PortfolioTable({ data }: Props) {
       <table className="w-full border-collapse bg-white">
         <thead className="bg-gray-100 text-left">
           <tr>
-            <th className="p-3">Sector / Stock</th>
+            <th className="p-3">Sector / Symbol</th>
             <th className="p-3">Qty</th>
             <th className="p-3">Purchase</th>
             <th className="p-3">CMP</th>
@@ -20,6 +20,8 @@ export default function PortfolioTable({ data }: Props) {
             <th className="p-3">Present Value</th>
             <th className="p-3">Gain/Loss</th>
             <th className="p-3">Portfolio %</th>
+            <th className="p-3">NSE/BSE</th>
+            <th className="p-3">P/E Ratio</th>
           </tr>
         </thead>
 
@@ -84,7 +86,7 @@ export default function PortfolioTable({ data }: Props) {
                       </td>
 
                       <td className="p-3">
-                        ₹{stock.presentValue.toLocaleString()}
+                        Rs{stock.presentValue.toLocaleString()}
                       </td>
 
                       <td
@@ -100,6 +102,13 @@ export default function PortfolioTable({ data }: Props) {
                       <td className="p-3">
                         {stock.portfolioPercent?.toFixed(2)}%
                       </td>
+                      
+                       <td className="p-3">
+                        {stock.exchange}
+                      </td>
+                        <td className="p-3">
+                          {stock.peRatio}
+                        </td>
                     </tr>
                   );
                 })}

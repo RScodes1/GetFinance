@@ -5,7 +5,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const response = await fetch("http://localhost:4500/api/portfolio");
+    const response = await fetch("http://localhost:4500/api/portfolio", {
+       next: { revalidate: 15 }, 
+    });
 
     const data = await response.json();
 
