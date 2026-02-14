@@ -37,18 +37,13 @@ TypeScript: 5+
 ## Installation
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
-cd <repo-name>
+git clone https://github.com/RScodes1/GetFinance.git
+cd GetFinance
 ```
 
 ### 2. Install Dependencies
 ```bash
 npm install
-```
-
-or
-```bash
-yarn install
 ```
 
 ### 3 Configure Backend Endpoint
