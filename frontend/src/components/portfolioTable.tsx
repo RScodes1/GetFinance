@@ -31,7 +31,6 @@ export default function PortfolioTable({ data }: Props) {
 
             return (
               <>
-                {/* ✅ Sector Row */}
                 <tr
                   key={sector.sector}
                   className="bg-gray-50 border-t-4 border-gray-200"

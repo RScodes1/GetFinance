@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { fetchPortfolio } from "@/services/portfolio.api";
-import { Stock } from "@/types/portfolio";
+import { SectorGroup } from "../types/portfolio";
 
 export const usePortfolio = () => {
-  const [data, setData] = useState<Stock[]>([]);
+  const [data, setData] = useState<SectorGroup[]>([]);
   const [totalValue, setTotalValue] = useState(0);
   const [loading, setLoading] = useState(true);
 
