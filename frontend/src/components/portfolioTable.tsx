@@ -26,7 +26,7 @@ export default function PortfolioTable({ data }: Props) {
         </thead>
 
         <tbody>
-          {data.map((sector) => {
+          {data?.map((sector) => {
             const sectorProfit = sector.gainLoss >= 0;
 
             return (

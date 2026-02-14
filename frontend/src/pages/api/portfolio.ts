@@ -5,7 +5,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const response = await fetch("http://localhost:4500/api/portfolio", {
+    const response = await fetch(`https://getfinance.onrender.com/api/portfolio`, {
        next: { revalidate: 15 }, 
     });
 
